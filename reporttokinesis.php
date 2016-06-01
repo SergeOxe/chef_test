@@ -12,7 +12,7 @@ $data = array_change_key_case((array) $json, CASE_LOWER);
 $snEventDocumentKinesis = json_encode($data);
 
 $time=time();
-$fileName = "/tmp/report.log".$time;
+$fileName = "/tmp/report.log";
 
 echo "file name: ".$fileName;
 
