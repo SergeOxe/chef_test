@@ -14,9 +14,12 @@ $snEventDocumentKinesis = json_encode($data);
 $time=time();
 $fileName = "temp/report.log".$time;
 
+echo "file name: ".$fileName;
+
 $file = fopen($fileName, "a+") or die("Unable to open file!");
 fwrite($file, $snEventDocumentKinesis);
 fclose($file);
+
 
 
 ?>
