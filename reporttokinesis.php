@@ -16,7 +16,7 @@ $fileName = "/tmp/report.log";
 
 echo "file name: ".$fileName;
 
-$file = fopen($fileName, "w+") or die("Unable to open file!");
+$file = fopen($fileName, "a") or die("Unable to open file!");
 fwrite($file, $snEventDocumentKinesis);
 fclose($file);
 
