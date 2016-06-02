@@ -9,10 +9,14 @@
 $json = json_decode($_GET['json']);
 $data = array_change_key_case((array) $json, CASE_LOWER);
 
+if($json == "" || $json == null)
+{
+	die("Empty json");
+}
+
 $snEventDocumentKinesis = json_encode($data)."\n";
 
-$time=time();
-$fileName = "/tmp/report.json".$time;
+$fileName = "/tmp/report.json";
 
 echo "file name: ".$fileName;
 
