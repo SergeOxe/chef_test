@@ -11,14 +11,12 @@ $data = array_change_key_case((array) $json, CASE_LOWER);
 
 if($json == "" || $json == null)
 {
-	die("Empty json");
+	die("Empty query");
 }
 
 $snEventDocumentKinesis = json_encode($data)."\n";
 
-$fileName = "/tmp/report.json";
-
-echo "file name: ".$fileName;
+$fileName = "/tmp/report.log";
 
 $file = fopen($fileName, "a+") or die("Unable to open file!");
 fwrite($file, $snEventDocumentKinesis);
